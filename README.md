@@ -8,63 +8,59 @@ This is task 3, a part of my DevOps specialization coursework.
 
 ```
 .
-├── README.md                   # Project documentation
-├── environments/               # Environment-specific configurations
-│   ├── dev/                    # Development environment
-│   │   ├── local.tf            # Local variables for development
-│   │   ├── main.tf             # Main configuration calling modules
-│   │   ├── output.tf           # Outputs for development environment
-│   │   ├── provider.tf         # AWS provider configuration
-│   │   ├── terraform.tfstate   # Terraform state file
-│   │   ├── terraform.tfvars    # Variable values for development
-│   │   └── variable.tf         # Input variables declaration
-│   ├── test/                   # Testing environment
-│   │   ├── local.tf            # Local variables for testing
-│   │   ├── main.tf             # Main configuration calling modules
-│   │   ├── output.tf           # Outputs for test environment
-│   │   ├── provider.tf         # AWS provider configuration
-│   │   ├── terraform.tfvars    # Variable values for testing
-│   │   └── variable.tf         # Input variables declaration
-│   └── prod/                   # Production environment
-│       ├── local.tf            # Local variables for production
-│       ├── main.tf             # Main configuration calling modules
-│       ├── output.tf           # Outputs for production environment
-│       ├── provider.tf         # AWS provider configuration
-│       ├── terraform.tfvars    # Variable values for production
-│       └── variable.tf         # Input variables declaration
-└── modules/                    # Reusable infrastructure modules
-    ├── ec2/                    # EC2 instance configuration
-    │   ├── main.tf             # Main EC2 resource definitions
-    │   ├── output.tf           # EC2 outputs
-    │   └── variable.tf         # EC2 input variables
-    ├── eip/                    # Elastic IP configuration
-    │   ├── main.tf             # Main EIP resource definitions
-    │   ├── output.tf           # EIP outputs
-    │   └── variable.tf         # EIP input variables
-    ├── igw/                    # Internet Gateway configuration
-    │   ├── main.tf             # Main IGW resource definitions
-    │   ├── output.tf           # IGW outputs
-    │   └── variables.tf        # IGW input variables
-    ├── nat/                    # NAT Gateway configuration
-    │   ├── main.tf             # Main NAT resource definitions
-    │   ├── output.tf           # NAT outputs
-    │   └── variables.tf        # NAT input variables
-    ├── s3/                     # S3 bucket configuration
-    │   ├── main.tf             # Main S3 resource definitions
-    │   ├── output.tf           # S3 outputs
-    │   └── variable.tf         # S3 input variables
-    ├── security_group/         # Security group configuration
-    │   ├── main.tf             # Main SG resource definitions
-    │   ├── output.tf           # SG outputs
-    │   └── variables.tf        # SG input variables
-    ├── subnet/                 # Subnet configuration
-    │   ├── main.tf             # Main subnet resource definitions
-    │   ├── output.tf           # Subnet outputs
-    │   └── variables.tf        # Subnet input variables
-    └── vpc/                    # VPC configuration
-        ├── main.tf             # Main VPC resource definitions
-        ├── output.tf           # VPC outputs
-        └── variables.tf        # VPC input variables
+├── README.md                   
+├── environments/               
+│   ├── dev/                    
+│   │   ├── local.tf            
+│   │   ├── main.tf             
+│   │   ├── output.tf           
+│   │   ├── provider.tf       
+│   │   └── variable.tf         
+│   ├── test/                   
+│   │   ├── local.tf            
+│   │   ├── main.tf             
+│   │   ├── output.tf           
+│   │   ├── provider.tf       
+│   │   └── variable.tf         
+│   └── prod/                   
+│       ├── local.tf            
+│       ├── main.tf             
+│       ├── output.tf           
+│       ├── provider.tf        
+│       └── variable.tf         
+└── modules/                    
+    ├── ec2/                    
+    │   ├── main.tf             
+    │   ├── output.tf           
+    │   └── variable.tf        
+    ├── eip/                    
+    │   ├── main.tf             
+    │   ├── output.tf          
+    │   └── variable.tf         
+    ├── igw/                    
+    │   ├── main.tf             
+    │   ├── output.tf           
+    │   └── variables.tf        
+    ├── nat/                    
+    │   ├── main.tf             
+    │   ├── output.tf           
+    │   └── variables.tf        
+    ├── s3/                     
+    │   ├── main.tf             
+    │   ├── output.tf           
+    │   └── variable.tf         
+    ├── security_group/         
+    │   ├── main.tf             
+    │   ├── output.tf          
+    │   └── variables.tf        
+    ├── subnet/                 
+    │   ├── main.tf             
+    │   ├── output.tf           
+    │   └── variables.tf        
+    └── vpc/                    
+        ├── main.tf             
+        ├── output.tf           
+        └── variables.tf        
 ```
 
 ## Modules
