@@ -3,11 +3,6 @@ output "ec2_instance_id" {
   value       = module.ec2.instance_id
 }
 
-# output "s3_bucket_arn" {
-#   description = "ARN of the S3 bucket created"
-#   value       = module.s3.bucket_arn
-# }
-
 output "eip_address" {
   description = "Elastic IP address assigned to the EC2 instance"
   value       = module.eip.eip_address

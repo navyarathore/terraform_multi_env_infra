@@ -1,6 +1,5 @@
 output "eip_address" {
   value = aws_eip.eip.address
-  description = "The public IP address of the Elastic IP"
 }
 
 output "allocation_id" {
@@ -10,5 +9,4 @@ output "allocation_id" {
 
 output "public_ip" {
   value = aws_eip.eip.public_ip
-  description = "The public IP address of the Elastic IP"
 }
