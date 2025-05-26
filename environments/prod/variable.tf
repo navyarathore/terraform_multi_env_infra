@@ -10,10 +10,6 @@ variable "common_tags" {
   type = map(string)
 }
 
-# variable "bucket_name" {
-#   type = string
-# }
-
 variable "vpc_cidr_block" {
   description = "CIDR block for the VPC"
   type        = string
@@ -81,4 +77,29 @@ variable "egress_rules" {
     description = optional(string)
   }))
   default = []
+}
+
+# variables for backend configuration
+variable "backend_bucket" {
+  description = "S3 bucket for Terraform state"
+  type        = string
+}
+
+variable "backend_key" {
+  description = "S3 key for Terraform state"
+  type        = string
+}
+
+variable "backend_region" {
+  description = "AWS region for the S3 bucket"
+  type        = string
+}
+
+variable "encrypt_state" {
+  description = "Enable encryption for the Terraform state"
+  type        = bool
+}
+variable "dynamodb_table" {
+  description = "DynamoDB table for state locking"
+  type        = string
 }

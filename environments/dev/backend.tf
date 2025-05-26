@@ -1,10 +1,9 @@
 terraform {
    backend "s3" {
-    bucket         = "terraform-multienv-statebucket"
-    key            = "common-state.tfstate"
-    # key            = "environments/dev/terraform.tfstate"
-    region         = "ap-south-1"
-    encrypt        = true
-    dynamodb_table = "dynamodb-state-locking"
+    bucket         = var.backend_bucket
+    key            = var.backend_key
+    region         = var.backend_region
+    encrypt        = var.encrypt_state
+    dynamodb_table = var.dynamodb_table
   }
 }
