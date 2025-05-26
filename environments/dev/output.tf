@@ -70,3 +70,23 @@ output "security_group_name" {
   description = "The name of the Security Group"
   value       = module.security_group.security_group_name
 }
+
+output "backend_bucket" {
+  description = "The S3 bucket used for the Terraform backend"
+  value       = var.backend_bucket
+}
+
+output "backend_key" {
+  description = "The key for the Terraform backend state file"
+  value       = var.backend_key
+}
+
+output "backend_region" {
+  description = "The region for the Terraform backend"
+  value       = var.backend_region
+}
+
+output "backend_dynamodb_table" {
+  description = "The DynamoDB table for the Terraform backend"
+  value       = var.dynamodb_table
+}

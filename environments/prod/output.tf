@@ -3,11 +3,6 @@ output "ec2_instance_id" {
   value       = module.ec2.instance_id
 }
 
-# output "s3_bucket_arn" {
-#   description = "ARN of the S3 bucket created"
-#   value       = module.s3.bucket_arn
-# }
-
 output "eip_address" {
   description = "Elastic IP address assigned to the EC2 instance"
   value       = module.eip.eip_address
@@ -74,4 +69,24 @@ output "security_group_arn" {
 output "security_group_name" {
   description = "The name of the Security Group"
   value       = module.security_group.security_group_name
+}
+
+output "backend_bucket" {
+  description = "The S3 bucket used for the Terraform backend"
+  value       = var.backend_bucket
+}
+
+output "backend_key" {
+  description = "The key for the Terraform backend state file"
+  value       = var.backend_key
+}
+
+output "backend_region" {
+  description = "The region for the Terraform backend"
+  value       = var.backend_region
+}
+
+output "backend_dynamodb_table" {
+  description = "The DynamoDB table for the Terraform backend"
+  value       = var.dynamodb_table
 }
